@@ -1,0 +1,20 @@
+Algorithm 1. Pseudo Code of Firefly Algorithm. Parameters, PopsSize, Max_Iteration, γ, I0, β, εReq are following.
+    (1) PopsSize: the size of Firefly population.
+    (2) Max_Iteration: maximum iteration number.
+    (3) γ: light absorption coefficient.
+    (4) I0: maximum brightness of firefly.
+    (5) β: attractiveness of a firefly.
+    (6) εReq: Requested search precision.
+Require: PopsSize, Max_Iteration, γ, β, ε and cost function.
+Initialize fireflies' positions at random within the D- dimensional search space.
+    While Iter<Max_Iter AND εReq < ε
+      For j=1:PopsSize
+        ‐ Compute each firefly's brightness according to the objective function value.
+      End
+    Select the firefly with the maximum brightness.
+      For j=1:PopsSize
+        For i=1:PopsSize
+        ‐ Compute firefly relative brightness I using (11a-11b), determine movement of the firefly by relative brightness.
+        ‐ Compute attractiveness β according to (12), update fireflies' space positions according to (13).
+      End
+    End
